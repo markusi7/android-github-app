@@ -26,7 +26,7 @@ dependencies:
 test:
   override:
     # run static analysis
-    - ./gradlew lintStagingDebug checkstyle pmd findbugs -PpreDexEnable=false -PdisablePreDex --console=plain
+    - ./gradlew lintDebug checkstyle pmd findbugs -PpreDexEnable=false -PdisablePreDex --console=plain
 
   post:
     # copy the build outputs and reports to artifacts
