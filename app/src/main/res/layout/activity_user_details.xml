@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_2x"
+                    android:gravity="center"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                <ImageView
+                        android:id="@+id/userAvatar"
+                        android:layout_width="@dimen/user_details_avatar_size"
+                        android:layout_height="@dimen/user_details_avatar_size"
+                        android:contentDescription="@string/user_image"
+                        android:transitionName="@string/transition_name_user_avatar"
+                        tools:src="@drawable/ic_avatar_placeholder"/>
+
+                <TextView
+                        android:id="@+id/userBio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/spacing_2x"
+                        android:paddingTop="@dimen/spacing_2x"
+                        android:paddingLeft="@dimen/spacing_5x"
+                        android:paddingRight="@dimen/spacing_5x"
+                        android:gravity="center"
+                        android:fontFamily="@string/roboto_regular"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/text_grey"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+                        tools:text="A bunch of text about how we do gr8 stuff la al la going multiple lines"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/divider_grey"/>
+
+            <TextView
+                    style="@style/Details.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/repository_details"
+                    android:paddingTop="@dimen/spacing_1x"
+                    android:paddingBottom="@dimen/spacing_1x"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/user_name"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/userCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/user_company"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/userEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/user_email"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/userLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/user_location"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/userCreatedAt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/member_since"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/publicReposCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/public_repos_count"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/numberOfFollowers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/number_of_followers"/>
+
+            <include
+                    android:id="@+id/detailsButton"
+                    layout="@layout/button_details"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

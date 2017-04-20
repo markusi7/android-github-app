@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">GitHub App</string>
+
+    <string name="oops">Oops!</string>
+    <string name="unknown">unknown</string>
+    <string name="sort_by">sort by :</string>
+    <string name="open_in_browser">Open In Browser</string>
+
+    <!-- Errors -->
+    <string name="error_unknown_problem">An unknown error has occurred.</string>
+    <string name="error_network_problem">No Internet connection available. Please check your data connection.</string>
+
+    <!-- Repositories sort types -->
+    <string name="relevance">Relevance</string>
+    <string name="stars">Stars</string>
+    <string name="forks">Forks</string>
+    <string name="last_updated">Last Updated</string>
+
+    <!-- Repositories -->
+    <string name="search_repositories">Search repositories</string>
+    <string name="enter_text">Please enter the text into the search box to browse repositories</string>
+    <string name="no_found_repositories">No repositories found with this search criteria. Please redo a search using a different search term.</string>
+
+    <string name="rate_limit_placeholder" formatted="false">Whoa! Looks like you\'re hitting the API pretty bad. \nCurrent count is %1$d/%2$d.\nIt will be reset at %3$s!</string>
+
+    <!-- Repository Details -->
+    <string name="repository_owner">Repository Owner</string>
+    <string name="repository_owner_avatar">Repository Owner Avatar</string>
+    <string name="repository_description">Repository Description</string>
+    <string name="repository_details">Repository Details</string>
+    <string name="repository_watchers_count">Watchers Count</string>
+    <string name="repository_forks_count">Forks Count</string>
+    <string name="repository_issues_count">Issues Count</string>
+    <string name="created_at">Created At</string>
+    <string name="updated_at">Updated At</string>
+    <string name="language">Language</string>
+    <string name="default_branch_name">Default Branch Name</string>
+
+    <!-- User Details -->
+    <string name="user_image">User Image</string>
+    <string name="user_name">Name</string>
+    <string name="user_company">Company</string>
+    <string name="user_location">Location</string>
+    <string name="user_email">Email</string>
+    <string name="public_repos_count">Public Repos Count</string>
+    <string name="number_of_followers">Number Of Followers</string>
+    <string name="member_since">Member Since</string>
+
+    <string name="transition_name_user_avatar">transition_name_user_avatar</string>
+
+</resources>

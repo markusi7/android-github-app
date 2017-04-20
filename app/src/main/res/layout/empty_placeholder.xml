@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="visible"
+        tools:parentTag="RelativeLayout">
+
+    <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/spacing_8x"
+            android:layout_marginRight="@dimen/spacing_8x"
+            android:gravity="center"
+            android:drawablePadding="@dimen/spacing_1x"
+            android:textSize="@dimen/text_size_medium"
+            tools:drawableTop="@drawable/ic_empty_placeholder"
+            tools:text="No search results"/>
+</merge>

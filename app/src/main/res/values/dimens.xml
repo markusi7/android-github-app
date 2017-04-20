@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Material design metrics-->
+    <dimen name="spacing_0x">0dp</dimen>
+    <dimen name="spacing_0.25x">2dp</dimen>
+    <dimen name="spacing_0.5x">4dp</dimen>
+    <dimen name="spacing_1x">8dp</dimen>
+    <dimen name="spacing_1.5x">12dp</dimen>
+    <dimen name="spacing_2x">16dp</dimen>
+    <dimen name="spacing_3x">24dp</dimen>
+    <dimen name="spacing_4x">32dp</dimen>
+    <dimen name="spacing_5x">40dp</dimen>
+    <dimen name="spacing_6x">48dp</dimen>
+    <dimen name="spacing_7x">56dp</dimen>
+    <dimen name="spacing_8x">64dp</dimen>
+    <dimen name="spacing_9x">72dp</dimen>
+    <dimen name="spacing_10x">80dp</dimen>
+
+    <dimen name="default_elevation">4dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_size_smallest">12sp</dimen>
+    <dimen name="text_size_smaller">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="repositories_loader_size">28dp</dimen>
+    <dimen name="list_item_avatar_size">64dp</dimen>
+
+    <dimen name="repository_details_user_avatar_size">40dp</dimen>
+    <dimen name="repository_details_user_layout">72dp</dimen>
+
+    <dimen name="user_details_avatar_size">144dp</dimen>
+</resources>

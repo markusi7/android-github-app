@@ -1,0 +1,33 @@
+<resources>
+
+    <style name="ListItem">
+        <item name="android:fontFamily">@string/roboto_regular</item>
+    </style>
+
+    <style name="ListItem.Title">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="ListItem.Subtitle">
+        <item name="android:textSize">@dimen/text_size_smaller</item>
+        <item name="android:textColor">@color/text_grey</item>
+    </style>
+
+    <style name="ListItem.Subtitle.Count">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">@dimen/spacing_0.5x</item>
+    </style>
+
+    <!-- is unnecessary, but to be consistent -->
+    <style name="Details"/>
+
+    <style name="Details.Title">
+        <item name="android:fontFamily">@string/roboto_medium</item>
+        <item name="android:paddingLeft">@dimen/spacing_2x</item>
+        <item name="android:paddingRight">@dimen/spacing_2x</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+</resources>

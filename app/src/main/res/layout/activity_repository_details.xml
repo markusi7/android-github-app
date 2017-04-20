@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    style="@style/Details.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/repository_owner"
+                    android:paddingTop="@dimen/spacing_2x"/>
+
+            <RelativeLayout
+                    android:id="@+id/userLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/repository_details_user_layout"
+                    android:paddingTop="@dimen/spacing_2x"
+                    android:paddingLeft="@dimen/spacing_2x"
+                    android:paddingRight="@dimen/spacing_2x"
+                    android:paddingBottom="@dimen/spacing_1x">
+
+                <ImageView
+                        android:id="@+id/userAvatar"
+                        android:layout_width="@dimen/repository_details_user_avatar_size"
+                        android:layout_height="@dimen/repository_details_user_avatar_size"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_avatar_placeholder"
+                        android:contentDescription="@string/user_image"
+                        android:transitionName="@string/transition_name_user_avatar"/>
+
+                <TextView
+                        android:id="@+id/userLogin"
+                        style="@style/ListItem.Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/userAvatar"
+                        android:paddingLeft="@dimen/spacing_2x"
+                        android:gravity="center_vertical"
+                        tools:text="Some cool username"/>
+
+            </RelativeLayout>
+
+            <include layout="@layout/divider_grey"/>
+
+            <TextView
+                    style="@style/Details.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/repository_details"
+                    android:paddingTop="@dimen/spacing_1x"
+                    android:paddingBottom="@dimen/spacing_1x"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/repositoryDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/repository_description"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/repositoryLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/language"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/repositoryWatchersCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/repository_watchers_count"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/repositoryForksCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/repository_forks_count"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/repositoryIssuesCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/repository_issues_count"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/repositoryCreatedAt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/created_at"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/repositoryUpdatedAt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/updated_at"/>
+
+            <markusi.githubapp.ui.shared.LabelValueView
+                    android:id="@+id/defaultBranchName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail_label="@string/default_branch_name"/>
+
+            <include
+                    android:id="@+id/detailsButton"
+                    layout="@layout/button_details"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

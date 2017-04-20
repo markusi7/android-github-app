@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- You can use android: prefixed attributes like this !-->
+    <declare-styleable name="EmptyPlaceholderView">
+        <attr name="android:src"/>
+        <attr name="initialText" format="reference|string"/>
+        <attr name="noSearchResultsText" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="LabelValueView">
+        <attr name="detail_label" format="reference|string"/>
+        <attr name="detail_value" format="reference|string"/>
+    </declare-styleable>
+</resources>

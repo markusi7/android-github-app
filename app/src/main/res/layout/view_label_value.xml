@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:parentTag="LinearLayout"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/roboto_medium"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/text_size_smallest"
+            tools:text="English"/>
+
+    <TextView
+            android:id="@+id/value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/roboto_regular"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_medium"
+            android:paddingBottom="@dimen/spacing_1x"
+            tools:text="Language"/>
+
+</merge>
