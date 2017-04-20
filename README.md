@@ -1,3 +1,5 @@
+![CircleCI](https://circleci.com/gh/markusi7/android-github-app.svg?style=shield)
+
 # Android GitHubApp
 
 This Android app serves as an example of various design patterns and practices used in modern Android application development.
