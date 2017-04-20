@@ -1,0 +1,33 @@
+# Build configuration file for Circle CI
+# needs to be named `circle.yml` and should be in the top level dir of the repo
+
+machine:
+  java:
+    version: openjdk8
+  environment:
+    # set the adb install timeout to 8 minutes (default is 2 minutes)
+    ADB_INSTALL_TIMEOUT: 8
+    PATH: "$ANDROID_HOME/tools/bin:$PATH"
+
+dependencies:
+  pre:
+    # at the moment Circle CI bundles an older version of SDK tools which doesn't have sdkmanager so we update first
+    # once a new enough version is available by default, the android tool will no longer be available
+    # (the last part makes sure we don't fail in that case)
+    - echo y | android update sdk --no-ui --all --filter "tools" || true
+    - echo y | sdkmanager "platforms;android-25"
+    - echo y | sdkmanager "build-tools;25.0.2"
+    - echo y | sdkmanager "tools"
+    - echo y | sdkmanager "platform-tools"
+    - echo y | sdkmanager "extras;android;m2repository"
+    - echo y | sdkmanager "extras;google;m2repository"
+
+
+test:
+  override:
+    # run static analysis
+    - ./gradlew lintStagingDebug checkstyle pmd findbugs -PpreDexEnable=false -PdisablePreDex --console=plain
+
+  post:
+    # copy the build outputs and reports to artifacts
+    - cp -r app/build/outputs $CIRCLE_ARTIFACTS
